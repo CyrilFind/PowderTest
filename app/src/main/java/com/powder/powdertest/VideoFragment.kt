@@ -26,6 +26,7 @@ class VideoFragment : Fragment(R.layout.fragment_video) {
         super.onViewCreated(view, savedInstanceState)
         exoPlayer.repeatMode = Player.REPEAT_MODE_ONE
         playerView.player = exoPlayer
+        textView_video_title.text = video.title
     }
 
     override fun onPause() {
