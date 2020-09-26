@@ -1,3 +1,11 @@
 package com.powder.powdertest
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-data class Video(val url: String)
+@Serializable
+data class Video(
+    @SerialName("video_url")
+    val url: String,
+    @SerialName("title")
+    val title: String,
+)
