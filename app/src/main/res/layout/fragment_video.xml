@@ -16,14 +16,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:use_controller="true" />
+        app:use_controller="true"
+        app:show_timeout="500"/>
 
     <TextView
         android:id="@+id/textView_video_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="#8FAAAAAA"
+        android:background="@color/dark_gray_transparent"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
