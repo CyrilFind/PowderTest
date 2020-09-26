@@ -7,10 +7,10 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 class VideoAdapter(activity: AppCompatActivity, val items: List<Video>) : FragmentStateAdapter(activity) {
 
     override fun getItemCount(): Int {
-        return items.count()
+        return Int.MAX_VALUE
     }
 
     override fun createFragment(position: Int): Fragment {
-        return VideoFragment().getInstance(items[position])
+        return VideoFragment().getInstance(items[position % items.count()])
     }
 }

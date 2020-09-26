@@ -34,5 +34,10 @@ class VideoFragment : Fragment(R.layout.fragment_video) {
         exoPlayer.playWhenReady = false
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        exoPlayer.release()
+    }
+
     fun getInstance(video: Video): Fragment = VideoFragment().apply { this.video = video }
 }
