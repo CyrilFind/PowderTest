@@ -10,7 +10,7 @@ import retrofit2.Retrofit
 
 object FakeDependencyInjection {
 
-    private lateinit var context: Context
+    lateinit var context: Context
     fun init(context: Context) {
         this.context = context
     }
