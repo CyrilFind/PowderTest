@@ -3,7 +3,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Video(
+data class NetworkVideo(
     @SerialName("video_url")
     val url: String,
     @SerialName("title")

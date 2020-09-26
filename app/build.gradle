@@ -54,6 +54,16 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage-ktx:19.2.0'
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-core:1.0.0-RC"
 
+    // Retrofit
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.7.0"
+
+    // AndroidX - Lifecycle - ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-alpha07'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0-alpha07'
+    implementation "android.arch.lifecycle:viewmodel:1.1.1"
+
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

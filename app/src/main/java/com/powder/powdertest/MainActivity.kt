@@ -6,19 +6,19 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.serialization.builtins.ListSerializer
-import kotlinx.serialization.json.Json
 
 
 class MainActivity : AppCompatActivity() {
+    private val viewModel = FakeDependencyInjection.mainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val videos = resources.openRawResource(R.raw.videos).bufferedReader().use {
-            kotlinxJson.decodeFromString(ListSerializer(Video.serializer()), it.readText())
+
+        viewModel.videosLiveData.observe(this) { videos ->
+            val videoAdapter = VideoAdapter(this, videos)
+            viewPager2_mainActivity.adapter = videoAdapter
         }
-        val videoAdapter = VideoAdapter(this, videos)
-        viewPager2_mainActivity.adapter = videoAdapter
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             window.insetsController?.hide(WindowInsets.Type.statusBars())
         } else {
@@ -29,10 +29,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-}
-
-val kotlinxJson = Json {
-    coerceInputValues = true
-    ignoreUnknownKeys = true
-    isLenient = true
 }

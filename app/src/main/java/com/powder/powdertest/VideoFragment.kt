@@ -13,7 +13,7 @@ import com.google.android.exoplayer2.util.Util
 import kotlinx.android.synthetic.main.fragment_video.*
 
 class VideoFragment : Fragment(R.layout.fragment_video) {
-    lateinit var video: Video
+    lateinit var video: VideoEntity
     private val exoPlayer: ExoPlayer by lazy {
         val userAgent = Util.getUserAgent(requireContext(), requireContext().packageName)
         val dataSourceFactory = DefaultDataSourceFactory(requireContext(), userAgent)
@@ -39,5 +39,5 @@ class VideoFragment : Fragment(R.layout.fragment_video) {
         exoPlayer.release()
     }
 
-    fun getInstance(video: Video): Fragment = VideoFragment().apply { this.video = video }
+    fun getInstance(video: VideoEntity): Fragment = VideoFragment().apply { this.video = video }
 }

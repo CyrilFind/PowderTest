@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class VideoAdapter(activity: AppCompatActivity, val items: List<Video>) : FragmentStateAdapter(activity) {
+class VideoAdapter(activity: AppCompatActivity, private val items: List<VideoEntity>) : FragmentStateAdapter(activity) {
 
     override fun getItemCount(): Int {
         return Int.MAX_VALUE
