@@ -7,7 +7,6 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-
 class MainActivity : AppCompatActivity() {
     private val viewModel = FakeDependencyInjection.mainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,5 +27,4 @@ class MainActivity : AppCompatActivity() {
             )
         }
     }
-
 }

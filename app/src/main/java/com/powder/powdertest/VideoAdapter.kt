@@ -11,6 +11,6 @@ class VideoAdapter(activity: AppCompatActivity, private val items: List<VideoEnt
     }
 
     override fun createFragment(position: Int): Fragment {
-        return VideoFragment().getInstance(items[position % items.count()])
+        return VideoFragment.newInstance(items[position % items.count()])
     }
 }

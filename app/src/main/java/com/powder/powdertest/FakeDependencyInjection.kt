@@ -14,6 +14,7 @@ object FakeDependencyInjection {
     fun init(context: Context) {
         this.context = context
     }
+
     private val kotlinxJson = Json {
         coerceInputValues = true
         ignoreUnknownKeys = true

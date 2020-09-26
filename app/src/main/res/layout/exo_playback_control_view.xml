@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintDimensionRatio="1:1"
-        app:cardBackgroundColor="@color/dark_gray_transparent"
+        app:cardBackgroundColor="@color/purple_700_transparent"
         app:cardCornerRadius="100dp"
         android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"

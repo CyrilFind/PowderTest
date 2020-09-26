@@ -10,7 +10,7 @@ import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.util.Util
 
 class VideoViewModel(video: VideoEntity) : ViewModel() {
-    val exoPlayer: ExoPlayer by lazy {
+    val exoPlayer: Player by lazy {
         val context = FakeDependencyInjection.context
         val userAgent = Util.getUserAgent(context, context.packageName)
         val dataSourceFactory = DefaultDataSourceFactory(context, userAgent)
@@ -23,6 +23,8 @@ class VideoViewModel(video: VideoEntity) : ViewModel() {
     }
 
     val title = video.title
+
+    val subtitle = "${video.userName} on ${video.gameTitle}"
 
     override fun onCleared() {
         super.onCleared()

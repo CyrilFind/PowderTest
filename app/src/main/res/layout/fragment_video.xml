@@ -26,21 +26,42 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:use_controller="true"
-            app:show_timeout="500" />
+            app:show_timeout="700" />
 
         <TextView
             android:id="@+id/textView_video_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@color/dark_gray_transparent"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:background="@color/purple_700_transparent"
+            android:fontFamily="@font/press_start_2p"
+            android:includeFontPadding="false"
+            android:padding="8dp"
             android:text="@{viewModel.title}"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Cool Video Title" />
+
+        <TextView
+            android:id="@+id/textView_video_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@color/purple_700_transparent"
+            android:fontFamily="@font/press_start_2p"
+            android:includeFontPadding="false"
+            android:padding="8dp"
+            android:text="@{viewModel.subtitle}"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="SlipShady95 on Fortnite" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
